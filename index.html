@@ -15,6 +15,7 @@
     <script src="project/js/external/openseadragon-scalebar.js"></script>
     <script src="project/js/external/w2ui-1.5.rc1.min.js"></script>
 
+    <script src="project/js/sampleMetadata.js"></script>
     <script src="project/js/tools/configTools.js"></script>
     <script src="project/js/tools/osdTools.js"></script>
     <script src="project/js/tools/annotationTools.js"></script>
@@ -31,7 +32,7 @@
 <script>
     var annotator = null;
     window.onload = function () {
-        Annotator.init(hierarchy, {
+        Annotator.init({
             userConfig: {
                 hierarchyStyles: {
                     'Clasto': {
@@ -49,6 +50,9 @@
                 }
             }
         });
+
+        Annotator.startAnnotations("username", hierarchy);
+        // Annotator.loadAnnotations({{ json_data }})
     }
 
     window.onresize = function () {

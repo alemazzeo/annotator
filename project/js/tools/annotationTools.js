@@ -48,6 +48,7 @@ var AnnotationTools = {
                     text: '',
                     icon: 'fa fa-hand-paper',
                     onClick: function () {
+                        Annotator.viewer.container.style.cursor = "move"
                         Annotator.currentTool = 'hand';
                     }
                 }
@@ -80,6 +81,7 @@ var AnnotationTools = {
                     text: '',
                     icon: 'fa fa-mouse-pointer',
                     onClick: function () {
+                        Annotator.viewer.container.style.cursor = "crosshair"
                         Annotator.currentTool = 'selectPointer';
                     }
                 }
@@ -192,6 +194,7 @@ var AnnotationTools = {
                     text: '',
                     icon: 'fa fa-pencil-alt',
                     onClick: function () {
+                        Annotator.viewer.container.style.cursor = "default"
                         Annotator.currentTool = 'freeDraw';
                     }
                 }
@@ -272,6 +275,7 @@ var AnnotationTools = {
                         text: '',
                         icon: 'fa fa-draw-polygon',
                         onClick: function () {
+                            Annotator.viewer.container.style.cursor = "default"
                             Annotator.currentTool = 'polygonDraw';
                         }
                     }
@@ -333,6 +337,7 @@ var AnnotationTools = {
                         text: '',
                         icon: 'fa fa-dot-circle',
                         onClick: function () {
+                            Annotator.viewer.container.style.cursor = "default"
                             Annotator.currentTool = 'circleArea';
                         }
                     },
@@ -413,6 +418,7 @@ var AnnotationTools = {
                     text: '',
                     icon: 'fa fa-eraser',
                     onClick: function () {
+                        Annotator.viewer.container.style.cursor = "default"
                         Annotator.currentTool = 'eraser';
                     }
                 }

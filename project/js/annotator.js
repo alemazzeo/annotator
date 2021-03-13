@@ -20,19 +20,50 @@ const Annotator = (function () {
         hierarchy: null,
         mDrag: null,
         tags: null,
+        full_image_heigth: null,
+        full_image_width: null,
+        currentUser: null,
+        dziFiles: [],
+        layers: {},
+        sample: {
+            "sample_metadata": {
+                "tipo_muestra": "Testigo lateral rotado",
+                "numero": "577",
+                "profundidad": 577,
+                "profundidad_corregida": null,
+                "sigla_pozo": "YPF.MdN.CMoE.e-3",
+                "nombre_pozo": "Cerro Morado Este e-3",
+                "empresa_operadora": "YPF SA",
+                "yacimiento": "Cerro Morado Este",
+                "bloque": "Cerro Morado Este",
+                "cuenca": "Neuquina",
+                "provincia": "Mendoza",
+                "pais": "Argentina",
+                "coordenada_x": -33.387125349999906,
+                "coordenada_y": -68.53713787999993,
+                "coordenada_z": null,
+                "formacion": "Centenario",
+                "tipo_reservorio": "Convencional",
+                "observaciones": null
+            },
+            "layers": {
+                "NX_20X": {
+                    "filename": "CMoE.e-3-577NX_20X.dzi",
+                    "pixel_size": 0.227e-6,
+                },
+                "NP_20X": {
+                    "filename": "CMoE.e-3-577NP_20X.dzi",
+                    "pixel_size": 0.227e-6,
+                },
+            }
+        },
 
-        init: function (hierarchy, config) {
-            if (config) {
-                if (config.startConfig) {
-                    me.startConfig = {
-                        ...me.startConfig, ...config.startConfig
-                    }
-                }
-                if (config.userConfig) {
-                    me.userConfig = {
-                        ...me.userConfig, ...config.userConfig
-                    }
-                }
+        init: function (config) {
+            me.startConfig = {
+                ...me.startConfig, ...config.startConfig
+            }
+            me.userConfig = {
+                ...me.userConfig, ...config.userConfig
             }
 
             document.onkeypress = me.onKeypress;
@@ -41,17 +72,41 @@ const Annotator = (function () {
             me.initToolbars();
             me.initSidebar();
             me.initOpenSeaDragon();
+        },
 
-            me.tags = new paper.Group({name: "tags"});
-            me.loadTags(hierarchy, me.tags);
+        startAnnotations: function (name, hierarchy) {
+            if (!me.layers[name]) {
+                me.layers[name] = new paper.Layer({name: name});
+                me.tags = me.layers[name].addChild(new paper.Group({name: "tags"}));
+                if (hierarchy) {
+                    me.loadTags(hierarchy, me.tags);
+                    me.currentTag = me.tags.children[0];
+                    me.fillSidebar(me.tags);
+                }
+            } else {
+                console.log("ERROR")
+            }
+
+        },
+
+        loadAnnotations: function (json_data) {
+            let loadLayer = paper.Layer.importJSON(json_data);
+            me.layers[loadLayer.name] = loadLayer;
+            me.tags = loadLayer.children.tags;
             me.currentTag = me.tags.children[0];
             me.fillSidebar(me.tags);
         },
 
-        viewHistory: function(){
+        saveState: function (name) {
+            me.layers[name].data.full_image_heigth = me.full_image_heigth;
+            me.layers[name].data.full_image_width = me.full_image_width;
+            return me.layers[name].exportJSON()
+        },
+
+        viewHistory: function () {
             let history = [""];
-            me.actionsHistory.forEach(function (action, i){
-                if (i === me.currentActionPointer){
+            me.actionsHistory.forEach(function (action, i) {
+                if (i === me.currentActionPointer) {
                     history.push(i + " - " + action.name + " <-- ")
                 } else {
                     history.push(i + " - " + action.name)
@@ -61,7 +116,7 @@ const Annotator = (function () {
             console.log(history.join("\n"));
         },
 
-        do: function(action){
+        do: function (action) {
             me.actionsHistory = me.actionsHistory.slice(
                 0, me.currentActionPointer + 1
             );
@@ -70,7 +125,7 @@ const Annotator = (function () {
             action.do();
         },
 
-        redo: function(){
+        redo: function () {
             let action = me.actionsHistory[me.currentActionPointer + 1];
             if (action) {
                 action.do();
@@ -78,7 +133,7 @@ const Annotator = (function () {
             }
         },
 
-        undo: function(){
+        undo: function () {
             let action = me.actionsHistory[me.currentActionPointer];
             if (action) {
                 action.undo();
@@ -212,7 +267,10 @@ const Annotator = (function () {
                         me.currentTag = event.node.paperGroup;
                     }
                 }));
-            w2ui.layout.content('main', "<div id=\"osd_viewer\" style=\"width: 100%; height:100%;\"</div>");
+            w2ui.layout.content(
+                'main',
+                "<div id=\"osd_viewer\" style=\"width: 100%; height:100%;\"</div>"
+            );
         },
 
         initViewerToolbar: function () {
@@ -302,18 +360,29 @@ const Annotator = (function () {
                 }
             }).setTracking(true);
 
+            me.viewer.world.addHandler("add-item", me._onViewerOpen);
+
             me.viewer.addTiledImage({
-                tileSource: "http://openseadragon.github.io/example-images/highsmith/highsmith.dzi",
+                tileSource: "https://openseadragon.github.io/example-images/highsmith/highsmith.dzi",
                 x: 0,
                 y: 0,
             });
 
         },
 
+        openDZI: function (name) {
+            me.viewer.open(me.dziFiles[name]);
+        },
+
+        _onViewerOpen: function () {
+            me.full_image_width = me.viewer.world.getItemAt(0).getContentSize().x;
+            me.full_image_heigth = me.viewer.world.getItemAt(0).getContentSize().y;
+        },
+
         loadTags: function (hierarchy, container) {
             hierarchy.forEach(function (item) {
-               let group = me.makeGroup(item.id, item.name, item.parents_ids);
-               container.addChild(group);
+                let group = me.makeGroup(item.id, item.name, item.parents_ids);
+                container.addChild(group);
             });
         },
 
@@ -348,7 +417,7 @@ const Annotator = (function () {
                     newSidebarButton = w2ui.sidebar.add([node]);
                 } else {
                     parent = w2ui.sidebar.get(
-                        "h_tag_" + group.data.parents[group.data.level-1]
+                        "h_tag_" + group.data.parents[group.data.level - 1]
                     )
                     newSidebarButton = w2ui.sidebar.insert(parent, null, [node])
                 }
@@ -397,7 +466,7 @@ const Annotator = (function () {
                             action: function (node) {
                                 function _selectAll(n) {
                                     n.paperGroup.getItems({class: paper.Path}).forEach(
-                                        function(path){
+                                        function (path) {
                                             path.selected = true;
                                         }
                                     )
@@ -405,6 +474,7 @@ const Annotator = (function () {
                                         _selectAll(sn);
                                     })
                                 }
+
                                 _selectAll(node);
                                 paper.view.draw();
                                 me.viewer.canvas.focus();
@@ -485,7 +555,7 @@ const Annotator = (function () {
 
         toggleVisibleAll(button, state) {
             button.paperGroup.visible = state;
-            button.nodes.forEach(function (item){
+            button.nodes.forEach(function (item) {
                 let group = item.paperGroup;
                 group.visible = state;
                 me.toggleVisibleAll(item, state);

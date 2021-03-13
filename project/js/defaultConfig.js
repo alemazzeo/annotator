@@ -14,6 +14,7 @@ startConfig = {
         ...AnnotationTools,
     },
     toolbarToolsOrder: [
+        'editSample',
         'editConfig',
         'home',
         'zoomIn',

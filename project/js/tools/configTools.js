@@ -100,5 +100,65 @@ var configTools = {
         };
         return me;
     }()),
+
+    editSample: (function () {
+        const me = {
+            layout: null,
+            form: null,
+            popup: null,
+            toolbar: {
+                break: 'break-config',
+                config: {
+                    type: 'button',
+                    id: 'editSample',
+                    text: '',
+                    icon: 'fa fa-edit',
+                    onClick: function () {
+                        me.openConfig();
+                    },
+                    onLoad: function () {
+                        $().w2form(me.metadataForm);
+                    }
+                }
+            },
+            metadataForm: {
+                name: 'metadataForm',
+                fields: [
+                    ...sampleMetadataFields
+                ],
+                actions: {
+                    'Aplicar': function (event) {
+                        console.log(this.getChanges());
+                        w2popup.close();
+                    },
+                    'Deshacer cambios': function (event) {
+                        this.clear();
+                    }
+                },
+            },
+
+            openConfig: function () {
+                w2popup.open({
+                    title   : 'Metadata de la muestra',
+                    width   : 500,
+                    height  : 700,
+                    showMax : true,
+                    body    : '<div id="divConfigPopup" style="' +
+                        'position: absolute; ' +
+                        'left: 5px; ' +
+                        'top: 5px; ' +
+                        'right: 5px; ' +
+                        'bottom: 5px;">' +
+                        '</div>',
+                    onOpen  : function (event) {
+                        event.onComplete = function () {
+                            $('#w2ui-popup #divConfigPopup').w2render('metadataForm');
+                        };
+                    },
+                });
+            },
+        };
+        return me;
+    }()),
 }
 
