@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>osd-spot-viewer</title>
+    <script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+    <script src="../js/external/openseadragon-paperjs-overlay.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+</head>
+<body>
+<h2>Drag the circles with the mouse!</h2>
+The circles are painted by <a href="http://paperjs.org/">Paper.js</a> on top of an
+<a href="https://openseadragon.github.io/">OpenSeadragon</a> windows by use of the the plugin
+<a href="https://github.com/eriksjolund/OpenSeadragonPaperjsOverlay">OpenSeadragonPaperjsOverlay</a>
+<br/>
+<br/>
+<div id="osd" style="width: 1000px; height:800px;"></div>
+<script>
+
+    var circles = [];
+    var myPath;
+    var hit_item = null;
+    var drag_handler = function(event) {
+        if (hit_item) {
+            var transformed_point1 = paper.view.viewToProject(new paper.Point(0,0));
+            var transformed_point2 = paper.view.viewToProject(new paper.Point(event.delta.x, event.delta.y));
+            hit_item.position = hit_item.position.add(transformed_point2.subtract(transformed_point1));
+            window.viewer.setMouseNavEnabled(false);
+            paper.view.draw();
+        } else {
+            if (event.shift) {
+                myPath.fillColor = 'white';
+            } else {
+                myPath.fillColor = 'red';
+            }
+            window.viewer.setMouseNavEnabled(false);
+            myPath.add(paper.view.viewToProject(new paper.Point(event.position.x, event.position.y)));
+            paper.view.draw();
+        }
+    };
+    var dragEnd_handler = function(event) {
+        if (hit_item) {
+            window.viewer.setMouseNavEnabled(true);
+        }
+        hit_item = null;
+        myPath.closed = true;
+        myPath.smooth();
+        myPath.simplify();
+        paper.view.draw();
+        window.viewer.setMouseNavEnabled(true);
+
+    };
+    var press_handler = function(event) {
+        hit_item = null;
+        var transformed_point = paper.view.viewToProject(new paper.Point(event.position.x, event.position.y));
+        var hit_test_result = paper.project.hitTest(transformed_point);
+        if (hit_test_result) {
+            hit_item = hit_test_result.item;
+        }
+        myPath = new paper.Path();
+        myPath.strokeColor = 'black';
+        myPath.strokeWidth = 20;
+        myPath.fillColor = 'red';
+        myPath.opacity = 0.5;
+    };
+
+    window.onload = function() {
+        this.viewer = OpenSeadragon({
+            id: "osd",
+            prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+            debugMode:  false,
+            visibilityRatio: 1.0,
+            constrainDuringPan: true,
+            showNavigator: true,
+            zoomPerScroll: 1.8
+        });
+        var overlay = this.viewer.paperjsOverlay();
+
+        new OpenSeadragon.MouseTracker({
+            element: this.viewer.canvas,
+            pressHandler: press_handler,
+            dragHandler: drag_handler,
+            dragEndHandler: dragEnd_handler
+        }).setTracking(true);
+        this.viewer.addTiledImage({
+            tileSource: "http://openseadragon.github.io/example-images/highsmith/highsmith.dzi",
+            x: 0,
+            y: 0,
+        });
+        window.onresize = function() {
+            overlay.resize();
+            overlay.resizecanvas();
+            console.log("circles[0]=", circles[0]);
+        };
+
+    };
+
+</script>
+</body>
+</html>

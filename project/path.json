@@ -1,0 +1,5506 @@
+[
+  "Group",
+  {
+    "name": "tags",
+    "applyMatrix": true,
+    "selected": true,
+    "children": [
+      [
+        "Group",
+        {
+          "name": "tag_0",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "selected": true,
+          "data": {
+            "id": 0,
+            "name": "Clasto",
+            "level": 0,
+            "style": {
+              "fillColor": "red"
+            },
+            "parents": []
+          },
+          "children": [
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "segments": [
+                  [
+                    2347.43387,
+                    1833.93271
+                  ],
+                  [
+                    2282.22738,
+                    2265.92575
+                  ],
+                  [
+                    2363.7355,
+                    2763.12529
+                  ],
+                  [
+                    2763.12529,
+                    3121.76102
+                  ],
+                  [
+                    3309.2297,
+                    3227.72158
+                  ],
+                  [
+                    3928.69142,
+                    3227.72158
+                  ],
+                  [
+                    4458.4942,
+                    3015.80046
+                  ],
+                  [
+                    4800.82831,
+                    2640.86311
+                  ],
+                  [
+                    4931.2413,
+                    2127.36195
+                  ],
+                  [
+                    4866.0348,
+                    1727.97216
+                  ],
+                  [
+                    4515.54988,
+                    1458.99536
+                  ],
+                  [
+                    4132.46172,
+                    1418.2413
+                  ],
+                  [
+                    3504.84919,
+                    1418.2413
+                  ],
+                  [
+                    3121.76102,
+                    1418.2413
+                  ]
+                ],
+                "closed": true,
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ],
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "segments": [
+                  [
+                    8460.54292,
+                    3969.44548
+                  ]
+                ],
+                "closed": true,
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ],
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "segments": [
+                  [
+                    8916.9884,
+                    3627.11137
+                  ],
+                  [
+                    8916.9884,
+                    3627.11137
+                  ]
+                ],
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ],
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "segments": [
+                  [
+                    8762.12297,
+                    3268.47564
+                  ],
+                  [
+                    8762.12297,
+                    3268.47564
+                  ]
+                ],
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ],
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "selected": true,
+                "segments": [
+                  [
+                    -1018.85151,
+                    1980.64733
+                  ]
+                ],
+                "closed": true,
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ]
+          ]
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_1",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 1,
+            "name": "Cuarzo",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          },
+          "children": [
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "segments": [
+                  [
+                    4018.35035,
+                    3757.52436
+                  ],
+                  [
+                    3977.59629,
+                    4140.61253
+                  ],
+                  [
+                    4156.91415,
+                    4499.24826
+                  ],
+                  [
+                    4450.34339,
+                    4866.0348
+                  ],
+                  [
+                    4866.0348,
+                    5061.65429
+                  ],
+                  [
+                    5314.32947,
+                    4923.09049
+                  ],
+                  [
+                    5599.60789,
+                    4540.00232
+                  ],
+                  [
+                    5624.06032,
+                    4002.04872
+                  ],
+                  [
+                    5346.93271,
+                    3578.2065
+                  ],
+                  [
+                    4963.84455,
+                    3398.88863
+                  ],
+                  [
+                    4482.94664,
+                    3325.53132
+                  ]
+                ],
+                "closed": true,
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ]
+          ]
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_2",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 2,
+            "name": "Monocristalino",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              1
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_3",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 3,
+            "name": "Con extinción relámpago",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_4",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 4,
+            "name": "Con extinción ondulosa",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_5",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 5,
+            "name": "Policristalino",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              1
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_6",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 6,
+            "name": "Con hasta 5 subgranos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              1,
+              5
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_7",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 7,
+            "name": "Con más de 5 subgranos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              1,
+              5
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_8",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 8,
+            "name": "Feldespato",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          },
+          "children": [
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "segments": [
+                  [
+                    5420.29002,
+                    1190.01856
+                  ],
+                  [
+                    5273.57541,
+                    1516.05104
+                  ],
+                  [
+                    5216.51972,
+                    1874.68677
+                  ],
+                  [
+                    5452.89327,
+                    2314.83063
+                  ],
+                  [
+                    5770.77494,
+                    2600.10905
+                  ],
+                  [
+                    6170.16473,
+                    2763.12529
+                  ],
+                  [
+                    6463.59397,
+                    2559.35499
+                  ],
+                  [
+                    6479.89559,
+                    2086.60789
+                  ],
+                  [
+                    6479.89559,
+                    1646.46404
+                  ],
+                  [
+                    6439.14153,
+                    1141.11369
+                  ],
+                  [
+                    6104.95824,
+                    798.77958
+                  ]
+                ],
+                "closed": true,
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ]
+          ]
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_9",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 9,
+            "name": "Potásico",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              8
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_10",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 10,
+            "name": "Homogéneo",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              9
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_11",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 11,
+            "name": "con macla Carlsbad",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              9
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_12",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 12,
+            "name": "con macla enrejada",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              9
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_13",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 13,
+            "name": "pertítico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              9
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_14",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 14,
+            "name": "con textura gráfica",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              9
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_15",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 15,
+            "name": "con simplectitas o intercrecimiento",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              9
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_16",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 16,
+            "name": "Plagioclasa",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              8
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_17",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 17,
+            "name": "Homogénea",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              16
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_18",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 18,
+            "name": "con macla polisintética",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              16
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_19",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 19,
+            "name": "zonada",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              16
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_20",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 20,
+            "name": "con antipertitas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              16
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_21",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 21,
+            "name": "con simplectitas o intercrecimiento",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              8,
+              16
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_22",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 22,
+            "name": "Feldespatoide",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          },
+          "children": [
+            [
+              "Path",
+              {
+                "applyMatrix": true,
+                "segments": [
+                  [
+                    872.13689,
+                    1458.99536
+                  ],
+                  [
+                    643.91415,
+                    1727.97216
+                  ],
+                  [
+                    423.84223,
+                    2388.18794
+                  ],
+                  [
+                    456.44548,
+                    2828.33179
+                  ],
+                  [
+                    741.7239,
+                    3105.4594
+                  ],
+                  [
+                    1141.11369,
+                    3203.26914
+                  ],
+                  [
+                    1507.90023,
+                    3211.41995
+                  ],
+                  [
+                    1833.93271,
+                    2983.19722
+                  ],
+                  [
+                    2168.11601,
+                    2600.10905
+                  ],
+                  [
+                    2314.83063,
+                    2249.62413
+                  ],
+                  [
+                    2339.28306,
+                    1727.97216
+                  ],
+                  [
+                    2331.13225,
+                    1247.07425
+                  ],
+                  [
+                    2282.22738,
+                    888.43852
+                  ],
+                  [
+                    1882.83759,
+                    904.74014
+                  ],
+                  [
+                    1556.8051,
+                    1092.20882
+                  ]
+                ],
+                "closed": true,
+                "fillColor": [
+                  1,
+                  0,
+                  0
+                ],
+                "strokeColor": [
+                  0,
+                  0,
+                  0
+                ],
+                "strokeWidth": 20
+              }
+            ]
+          ]
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_23",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 23,
+            "name": "Litoclasto",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_24",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 24,
+            "name": "Indeterminado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              23
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_25",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 25,
+            "name": "Plutónico",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              23
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_26",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 26,
+            "name": "Ácido",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              25
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_27",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 27,
+            "name": "Mesosilícico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              25
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_28",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 28,
+            "name": "Básico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              25
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_29",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 29,
+            "name": "Volcánico",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              23
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_30",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 30,
+            "name": "Ácido",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              29
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_31",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 31,
+            "name": "Mesosilícico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              29
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_32",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 32,
+            "name": "Básico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              29
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_33",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 33,
+            "name": "Sedimentario",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              23
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_34",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 34,
+            "name": "Clástico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_35",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 35,
+            "name": "Arcilita",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_36",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 36,
+            "name": "Fangolita",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_37",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 37,
+            "name": "Limolita",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_38",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 38,
+            "name": "Pelita",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_39",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 39,
+            "name": "Vaque",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_40",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 40,
+            "name": "Arenisca",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_41",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 41,
+            "name": "Conglomerado",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_42",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 42,
+            "name": "Brecha",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              34
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_43",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 43,
+            "name": "Piroclástico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_44",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 44,
+            "name": "Lapillita",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              43
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_45",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 45,
+            "name": "Toba",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              43
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_46",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 46,
+            "name": "Carbonático",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_47",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 47,
+            "name": "Mudstone",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              46
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_48",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 48,
+            "name": "Wackestone",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              46
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_49",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 49,
+            "name": "Packstone",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              46
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_50",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 50,
+            "name": "Grainstone",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              46
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_51",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 51,
+            "name": "Caliza cristalina",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33,
+              46
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_52",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 52,
+            "name": "Evaporítico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_53",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 53,
+            "name": "Bioquímico",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_54",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 54,
+            "name": "Híbrido / Mixto",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              33
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_55",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 55,
+            "name": "Metamórfico",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              23
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_56",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 56,
+            "name": "de grado bajo",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              55
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_57",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 57,
+            "name": "de grado medio",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              55
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_58",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 58,
+            "name": "de grado alto",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              23,
+              55
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_59",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 59,
+            "name": "Mineral indeterminado",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_60",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 60,
+            "name": "Micas",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_61",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 61,
+            "name": "Muscovita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              60
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_62",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 62,
+            "name": "Biotita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              60
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_63",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 63,
+            "name": "Mineral pesado",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_64",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 64,
+            "name": "Anfíbol",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_65",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 65,
+            "name": "Andalusita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_66",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 66,
+            "name": "Apatita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_67",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 67,
+            "name": "Epidoto",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_68",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 68,
+            "name": "Granate",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_69",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 69,
+            "name": "Cianita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_70",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 70,
+            "name": "Monacita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_71",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 71,
+            "name": "Olivina",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_72",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 72,
+            "name": "Opaco",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_73",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 73,
+            "name": "Piroxeno",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_74",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 74,
+            "name": "Rutilo",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_75",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 75,
+            "name": "Sillimanita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_76",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 76,
+            "name": "Estaurolita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_77",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 77,
+            "name": "Titanita/Esfena",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_78",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 78,
+            "name": "Turmalina",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_79",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 79,
+            "name": "Circón",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_80",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 80,
+            "name": "Indeterminado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              63
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_81",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 81,
+            "name": "Bioclasto",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_82",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 82,
+            "name": "Silíceo",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              81
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_83",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 83,
+            "name": "Radiolarios",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              82
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_84",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 84,
+            "name": "Espículas de esponjas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              82
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_85",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 85,
+            "name": "Diatomeas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              82
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_86",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 86,
+            "name": "Silicoflagelados",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              82
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_87",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 87,
+            "name": "Indeterminado",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              82
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_88",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 88,
+            "name": "Calcáreo",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              81
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_89",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 89,
+            "name": "Bivalvos / Pelecípodos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_90",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 90,
+            "name": "Pectínidos",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              89
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_91",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 91,
+            "name": "Grifeidos",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              89
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_92",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 92,
+            "name": "Ostreidos",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              89
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_93",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 93,
+            "name": "Inocerámidos",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              89
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_94",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 94,
+            "name": "Indeterminados",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              89
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_95",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 95,
+            "name": "Braquiópodos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_96",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 96,
+            "name": "Espinas",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              95
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_97",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 97,
+            "name": "Valvas punctuadas",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              95
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_98",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 98,
+            "name": "Valvas impunctuadas",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              95
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_99",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 99,
+            "name": "Valvas pseudopunctuadas",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              95
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_100",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 100,
+            "name": "Indeterminados",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              95
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_101",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 101,
+            "name": "Gastrópodos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_102",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 102,
+            "name": "Equinoideos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_103",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 103,
+            "name": "Crinoideos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_104",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 104,
+            "name": "Foraminíferos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_105",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 105,
+            "name": "Bentónicos",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              104
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_106",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 106,
+            "name": "Planctónicos",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              104
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_107",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 107,
+            "name": "Corales",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_108",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 108,
+            "name": "Rugosa",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              107
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_109",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 109,
+            "name": "Tabulata",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              107
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_110",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 110,
+            "name": "Scieractinia",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              107
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_111",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 111,
+            "name": "Esponjas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_112",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 112,
+            "name": "Ostrácodos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_113",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 113,
+            "name": "Arqueociátidos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_114",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 114,
+            "name": "Amonites",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_115",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 115,
+            "name": "Belemnites",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_116",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 116,
+            "name": "Escafópodos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_117",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 117,
+            "name": "Algas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_118",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 118,
+            "name": "Rojas",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              117
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_119",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 119,
+            "name": "Verdes",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              117
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_120",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 120,
+            "name": "Filoides",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              117
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_121",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 121,
+            "name": "Indeterminadas",
+            "level": 4,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88,
+              117
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_122",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 122,
+            "name": "Anélidos / Serpúlidos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_123",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 123,
+            "name": "Briozoarios",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_124",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 124,
+            "name": "Calciesferas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_125",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 125,
+            "name": "Calpionélidos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_126",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 126,
+            "name": "Blastoideos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_127",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 127,
+            "name": "Trilobites",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_128",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 128,
+            "name": "Cocolitos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_129",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 129,
+            "name": "Estromatolitos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_130",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 130,
+            "name": "Asteroideos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_131",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 131,
+            "name": "Carofitas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_132",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 132,
+            "name": "Holoturoideos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_133",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 133,
+            "name": "Ofiuroideos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_134",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 134,
+            "name": "Espículas de tunicatos",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              88
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_135",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 135,
+            "name": "Fosfático",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              81
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_136",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 136,
+            "name": "Restos de vertebrados",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              135
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_137",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 137,
+            "name": "Orgánico",
+            "level": 2,
+            "style": {},
+            "parents": [
+              0,
+              81
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_138",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 138,
+            "name": "Dinoflagelados",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              137
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_139",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 139,
+            "name": "Materia orgánica",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              137
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_140",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 140,
+            "name": "Polen",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              137
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_141",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 141,
+            "name": "Esporas",
+            "level": 3,
+            "style": {},
+            "parents": [
+              0,
+              81,
+              137
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_142",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 142,
+            "name": "Fosfático",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_143",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 143,
+            "name": "Ferruginoso",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_144",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 144,
+            "name": "Glauconítico",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_145",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 145,
+            "name": "Pisolita/Ooide pedogénico",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_146",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 146,
+            "name": "Ooide carbonático",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_147",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 147,
+            "name": "Peloide/pellet carbonático",
+            "level": 1,
+            "style": {},
+            "parents": [
+              0
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_148",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 148,
+            "name": "Matriz",
+            "level": 0,
+            "style": {
+              "fillColor": "green"
+            },
+            "parents": []
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_149",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 149,
+            "name": "Silicoclástica",
+            "level": 1,
+            "style": {},
+            "parents": [
+              148
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_150",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 150,
+            "name": "Arcillosa",
+            "level": 2,
+            "style": {},
+            "parents": [
+              148,
+              149
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_151",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 151,
+            "name": "Limosa",
+            "level": 2,
+            "style": {},
+            "parents": [
+              148,
+              149
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_152",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 152,
+            "name": "Arenosa",
+            "level": 2,
+            "style": {},
+            "parents": [
+              148,
+              149
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_153",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 153,
+            "name": "Carbonática",
+            "level": 1,
+            "style": {},
+            "parents": [
+              148
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_154",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 154,
+            "name": "Micrítica",
+            "level": 2,
+            "style": {},
+            "parents": [
+              148,
+              153
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_155",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 155,
+            "name": "Mixta",
+            "level": 1,
+            "style": {},
+            "parents": [
+              148
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_156",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 156,
+            "name": "Arcillosa-calcimicrítica",
+            "level": 2,
+            "style": {},
+            "parents": [
+              148,
+              155
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_157",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 157,
+            "name": "Pseudomatriz",
+            "level": 1,
+            "style": {},
+            "parents": [
+              148
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_158",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 158,
+            "name": "Cemento",
+            "level": 0,
+            "style": {
+              "fillColor": "yellow"
+            },
+            "parents": []
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_159",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 159,
+            "name": "Sílice",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_160",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 160,
+            "name": "Cuarzo",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              159
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_161",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 161,
+            "name": "Calcedonia",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              159
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_162",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 162,
+            "name": "Sílice indiferenciada",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              159
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_163",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 163,
+            "name": "Ópalo",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              159
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_164",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 164,
+            "name": "Ópalo A",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              159
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_165",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 165,
+            "name": "Ópalo CT",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              159
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_166",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 166,
+            "name": "Feldespatos",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_167",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 167,
+            "name": "Indiferenciado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              166
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_168",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 168,
+            "name": "Albita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              166
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_169",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 169,
+            "name": "Potásico",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              166
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_170",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 170,
+            "name": "Arcillas",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_171",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 171,
+            "name": "Arcilla indiferenciada",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_172",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 172,
+            "name": "Arcilla infiltrada",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_173",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 173,
+            "name": "Bertierina/Chamosita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_174",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 174,
+            "name": "Caolinita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_175",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 175,
+            "name": "Celadonita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_176",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 176,
+            "name": "Clorita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_177",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 177,
+            "name": "Clorita/Esmectita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_178",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 178,
+            "name": "Dickita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_179",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 179,
+            "name": "Esmectita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_180",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 180,
+            "name": "Glauconita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_181",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 181,
+            "name": "Illita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_182",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 182,
+            "name": "Illita/Esmectita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_183",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 183,
+            "name": "Montmorillonita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_184",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 184,
+            "name": "Nontronita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_185",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 185,
+            "name": "Palagonita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_186",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 186,
+            "name": "Prehnita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_187",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 187,
+            "name": "Pumpellita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_188",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 188,
+            "name": "Pirofilita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_189",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 189,
+            "name": "Sericita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_190",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 190,
+            "name": "Serpentina",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_191",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 191,
+            "name": "Talco",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_192",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 192,
+            "name": "Vermiculita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              170
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_193",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 193,
+            "name": "Ceolitas",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_194",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 194,
+            "name": "Analcima",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              193
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_195",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 195,
+            "name": "Chabacita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              193
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_196",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 196,
+            "name": "Heulandita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              193
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_197",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 197,
+            "name": "Clinoptilolita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              193
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_198",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 198,
+            "name": "Laumontita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              193
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_199",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 199,
+            "name": "Phillipsita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              193
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_200",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 200,
+            "name": "Indiferenciado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              193
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_201",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 201,
+            "name": "Carbonatos",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_202",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 202,
+            "name": "Aragonita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_203",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 203,
+            "name": "Calcita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_204",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 204,
+            "name": "Dolomita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_205",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 205,
+            "name": "Dolomita ferrosa/Ankerita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_206",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 206,
+            "name": "Calcita ferrosa",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_207",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 207,
+            "name": "Calcita de alto Mg",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_208",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 208,
+            "name": "Calcita de bajo Mg",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_209",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 209,
+            "name": "Magnesita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_210",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 210,
+            "name": "Rodocrosita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_211",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 211,
+            "name": "Siderita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              201
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_212",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 212,
+            "name": "Sulfatos",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_213",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 213,
+            "name": "Anhidrita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              212
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_214",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 214,
+            "name": "Baritina",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              212
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_215",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 215,
+            "name": "Celestina",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              212
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_216",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 216,
+            "name": "Indiferenciado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              212
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_217",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 217,
+            "name": "Jarosita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              212
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_218",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 218,
+            "name": "Yeso",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              212
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_219",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 219,
+            "name": "Sulfuros",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_220",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 220,
+            "name": "Bornita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_221",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 221,
+            "name": "Calcosina",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_222",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 222,
+            "name": "Calcopirita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_223",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 223,
+            "name": "Galena",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_224",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 224,
+            "name": "Indiferenciado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_225",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 225,
+            "name": "Marcasita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_226",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 226,
+            "name": "Pirita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_227",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 227,
+            "name": "Pirrotina",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_228",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 228,
+            "name": "Esfalerita/Blenda",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              219
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_229",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 229,
+            "name": "Óxi / Hidróxidos de hierro",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_230",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 230,
+            "name": "Goethita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              229
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_231",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 231,
+            "name": "Hematita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              229
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_232",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 232,
+            "name": "Indiferenciado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              229
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_233",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 233,
+            "name": "Limonita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              229
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_234",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 234,
+            "name": "Óxidos de titanio",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_235",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 235,
+            "name": "Anatasa",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              234
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_236",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 236,
+            "name": "Brookita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              234
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_237",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 237,
+            "name": "Leucoxeno",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              234
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_238",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 238,
+            "name": "Rutilo",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              234
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_239",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 239,
+            "name": "Titanita/Esfena",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              234
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_240",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 240,
+            "name": "Indiferenciado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              234
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_241",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 241,
+            "name": "Orgánicos",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_242",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 242,
+            "name": "Bitumen",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              241
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_243",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 243,
+            "name": "Hidrocarburo líquido",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              241
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_244",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 244,
+            "name": "Fosfatos",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_245",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 245,
+            "name": "Colofano",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              244
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_246",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 246,
+            "name": "Apatita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              244
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_247",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 247,
+            "name": "Indiferenciado",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              244
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_248",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 248,
+            "name": "Haluros",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_249",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 249,
+            "name": "Halita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              248
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_250",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 250,
+            "name": "Silvita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              248
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_251",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 251,
+            "name": "Fluorita",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              248
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_252",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 252,
+            "name": "Otros",
+            "level": 1,
+            "style": {},
+            "parents": [
+              158
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_253",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 253,
+            "name": "Epidoto",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              252
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_254",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 254,
+            "name": "Anfíbol",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              252
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_255",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 255,
+            "name": "Óxidos de manganeso",
+            "level": 2,
+            "style": {},
+            "parents": [
+              158,
+              252
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_256",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 256,
+            "name": "Poro",
+            "level": 0,
+            "style": {
+              "fillColor": "blue"
+            },
+            "parents": []
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_257",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 257,
+            "name": "Intergranular",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_258",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 258,
+            "name": "Intragranular",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_259",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 259,
+            "name": "Móldico",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_260",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 260,
+            "name": "Fractura de grano",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_261",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 261,
+            "name": "Fractura de roca",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_262",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 262,
+            "name": "Interparticular",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_263",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 263,
+            "name": "Intraparticular",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_264",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 264,
+            "name": "Intercristalino",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_265",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 265,
+            "name": "Fenestral",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_266",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 266,
+            "name": "En zonas protegidas/Shelter",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_267",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 267,
+            "name": "En estructuras de crecimiento/Growth framework",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_268",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 268,
+            "name": "Canales/Channel",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_269",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 269,
+            "name": "Cavidades/Vugs",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_270",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 270,
+            "name": "Cavernas/Caverns",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_271",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 271,
+            "name": "Brechoide",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_272",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 272,
+            "name": "Perforaciones/Borings",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_273",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 273,
+            "name": "Galerías/Burrows",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_274",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 274,
+            "name": "De desecación/Shrinkage",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_275",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 275,
+            "name": "Intraorgánico/Asociado a MO",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_276",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 276,
+            "name": "Disolución de matriz",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_277",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 277,
+            "name": "Sobredimensionado/Oversized",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ],
+      [
+        "Group",
+        {
+          "name": "tag_278",
+          "applyMatrix": true,
+          "opacity": 0.5,
+          "data": {
+            "id": 278,
+            "name": "Indiferenciado",
+            "level": 1,
+            "style": {},
+            "parents": [
+              256
+            ]
+          }
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annotator test</title>
+
+    <link rel="stylesheet" type="text/css" href="project/css/w2ui-1.5.rc1.min.css"/>
+
+    <link rel="stylesheet" href="project/css/all.css">
+
+    <script src="project/js/external/jquery.min.js"></script>
+    <script src="project/js/external/openseadragon.min.js"></script>
+    <script src="project/js/external/paper-full.min.js"></script>
+    <script src="project/js/external/openseadragon-paperjs-overlay.js"></script>
+    <script src="project/js/external/openseadragon-scalebar.js"></script>
+    <script src="project/js/external/w2ui-1.5.rc1.min.js"></script>
+
+    <script src="project/js/tools/configTools.js"></script>
+    <script src="project/js/tools/osdTools.js"></script>
+    <script src="project/js/tools/annotationTools.js"></script>
+    <script src="project/js/defaultConfig.js"></script>
+    <script src="project/js/actions.js"></script>
+    <script src="project/js/annotator.js"></script>
+    <script src="project/js/hierarchy.js"></script>
+
+</head>
+<body>
+
+<div id="annotator" style="width: 99vw; height:95vh;"></div>
+
+<script>
+    var annotator = null;
+    window.onload = function () {
+        Annotator.init(hierarchy, {
+            userConfig: {
+                hierarchyStyles: {
+                    'Clasto': {
+                        fillColor: 'red',
+                    },
+                    'Cemento': {
+                        fillColor: 'yellow',
+                    },
+                    'Poro': {
+                        fillColor: 'blue',
+                    },
+                    'Matriz': {
+                        fillColor: 'green',
+                    },
+                }
+            }
+        });
+    }
+
+    window.onresize = function () {
+        Annotator.overlay.resize();
+        Annotator.overlay.resizecanvas();
+    };
+
+</script>
+</body>
+</html>
