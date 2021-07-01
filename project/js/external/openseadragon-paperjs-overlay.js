@@ -90,6 +90,7 @@
                 var viewportZoom = this._viewer.viewport.getZoom(true);
                 var image1 = this._viewer.world.getItemAt(0);
                 paper.view.zoom = image1.viewportToImageZoom(viewportZoom);
+                console.log(paper.view.zoom);
                 var center = this._viewer.viewport.viewportToImageCoordinates(this._viewer.viewport.getCenter(true));
                 paper.view.center = new paper.Point(center.x, center.y);
        }

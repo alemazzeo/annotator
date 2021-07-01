@@ -552,7 +552,7 @@ hierarchy = [
     {
         id: 110,
         parents_ids: [0, 81, 88, 107],
-        name: "Scieractinia"
+        name: "Scleractinia"
     },
     {
         id: 111,

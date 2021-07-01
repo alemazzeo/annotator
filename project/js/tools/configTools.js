@@ -44,7 +44,7 @@ var configTools = {
                         required: true,
                         html: {
                             page: 0,
-                            caption: 'Campo 1',
+                            label: 'Campo 1',
                             attr: 'style="width: 100px"'}
                     },
                     {
@@ -53,7 +53,7 @@ var configTools = {
                         required: true,
                         html: {
                             page: 0,
-                            caption: 'Campo 2',
+                            label: 'Campo 2',
                             attr: 'style="width: 100px"'}
                     },
                     {
@@ -62,7 +62,7 @@ var configTools = {
                         required: true,
                         html: {
                             page: 1,
-                            caption: 'Campo 3',
+                            label: 'Campo 3',
                             attr: 'style="width: 100px"'}
                     },
                 ],
@@ -106,6 +106,7 @@ var configTools = {
             layout: null,
             form: null,
             popup: null,
+            record: {},
             toolbar: {
                 break: 'break-config',
                 config: {
@@ -153,6 +154,9 @@ var configTools = {
                     onOpen  : function (event) {
                         event.onComplete = function () {
                             $('#w2ui-popup #divConfigPopup').w2render('metadataForm');
+                            w2ui["metadataForm"].record = me.record;
+                            w2ui["metadataForm"].refresh();
+                            console.log(me.record);
                         };
                     },
                 });

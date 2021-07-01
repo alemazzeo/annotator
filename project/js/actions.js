@@ -6,6 +6,8 @@ const actions = {
     addAnnotation: function (path, group) {
         const me = {
             name: "Commit Annotation",
+            actionGroup: "annotations",
+            actionType: "add",
             path: path,
             group: group,
             done: false,
@@ -17,7 +19,6 @@ const actions = {
                     me.path.style = {};
                     me.group.addChild(me.path);
                     Annotator.updateGroup(group);
-                    paper.view.draw();
                     me.done = true;
                 }
             },
@@ -26,7 +27,6 @@ const actions = {
                 if (me.done === true){
                     me.path.visible = false;
                     me.path.remove();
-                    paper.view.draw();
                     me.done = false;
                 }
             }
@@ -37,6 +37,8 @@ const actions = {
     deleteAnnotations: function(paths){
         const me = {
             name: "Delete Annotation",
+            actionGroup: "annotations",
+            actionType: "edit",
             paths: paths,
             done: false,
 
@@ -47,7 +49,6 @@ const actions = {
                         path.remove();
                     });
 
-                    paper.view.draw();
                     me.done = true;
                 }
             },
@@ -58,7 +59,6 @@ const actions = {
                         path.removedFrom.addChild(path);
                     });
 
-                    paper.view.draw();
                     me.done = false;
                 }
             }

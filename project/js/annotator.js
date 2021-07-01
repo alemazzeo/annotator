@@ -3,6 +3,7 @@
 
 const Annotator = (function () {
     const me = {
+        role: "admin",
         startConfig: startConfig,
         userConfig: userConfig,
         userId: 0,
@@ -20,45 +21,17 @@ const Annotator = (function () {
         hierarchy: null,
         mDrag: null,
         tags: null,
-        full_image_heigth: null,
+        full_image_height: null,
         full_image_width: null,
         currentUser: null,
-        dziFiles: [],
+        currentSample: null,
         layers: {},
-        sample: {
-            "sample_metadata": {
-                "tipo_muestra": "Testigo lateral rotado",
-                "numero": "577",
-                "profundidad": 577,
-                "profundidad_corregida": null,
-                "sigla_pozo": "YPF.MdN.CMoE.e-3",
-                "nombre_pozo": "Cerro Morado Este e-3",
-                "empresa_operadora": "YPF SA",
-                "yacimiento": "Cerro Morado Este",
-                "bloque": "Cerro Morado Este",
-                "cuenca": "Neuquina",
-                "provincia": "Mendoza",
-                "pais": "Argentina",
-                "coordenada_x": -33.387125349999906,
-                "coordenada_y": -68.53713787999993,
-                "coordenada_z": null,
-                "formacion": "Centenario",
-                "tipo_reservorio": "Convencional",
-                "observaciones": null
-            },
-            "layers": {
-                "NX_20X": {
-                    "filename": "CMoE.e-3-577NX_20X.dzi",
-                    "pixel_size": 0.227e-6,
-                },
-                "NP_20X": {
-                    "filename": "CMoE.e-3-577NP_20X.dzi",
-                    "pixel_size": 0.227e-6,
-                },
-            }
-        },
+        currentItemTooltip: null,
 
         init: function (config) {
+            me.roles = {
+                ...config.roles
+            };
             me.startConfig = {
                 ...me.startConfig, ...config.startConfig
             }
@@ -77,6 +50,7 @@ const Annotator = (function () {
         startAnnotations: function (name, hierarchy) {
             if (!me.layers[name]) {
                 me.layers[name] = new paper.Layer({name: name});
+                me.layers[name].annotations = []
                 me.tags = me.layers[name].addChild(new paper.Group({name: "tags"}));
                 if (hierarchy) {
                     me.loadTags(hierarchy, me.tags);
@@ -98,9 +72,59 @@ const Annotator = (function () {
         },
 
         saveState: function (name) {
-            me.layers[name].data.full_image_heigth = me.full_image_heigth;
+            me.layers[name].data.full_image_height = me.full_image_height;
             me.layers[name].data.full_image_width = me.full_image_width;
             return me.layers[name].exportJSON()
+        },
+
+        exportAnnotations: function (layerName) {
+            let annotations = []
+            me.layers[layerName].children.tags.children.forEach(function (group){
+                group.children.forEach(function (path){
+                    let segments = []
+                    path.segments.forEach(function (item){
+                        segments.push([item.point.x, item.point.y])
+                    })
+                    annotations.push({
+                        groupId: group.data.id,
+                        segments: segments
+                    })
+                });
+            });
+            return annotations
+        },
+
+        importAnnotations: function (layerName, annotations) {
+            let layer = me.layers[layerName];
+            annotations.forEach(function (x){
+                let group = layer.children.tags.getItem({name: "tag_" + x.groupId});
+                let path = new paper.Path(x.segments);
+                path.closed = true;
+                path.style = {...me.userConfig.baseStyle}
+                path.style.strokeWidth = me.adjustByZoom(
+                    me.userConfig.baseStrokeWidth
+                );
+                group.addChild(path);
+                me.updateGroup(group);
+            })
+            me.updateView();
+        },
+
+        loadSample: function (sample) {
+            let layerMenu = w2ui['layout_main_toolbar'].get("layerMenu");
+            me.currentSample = sample;
+            me.openDZI(me.currentSample.dziFiles[0]);
+            me.currentSample.dziFiles.forEach(function (item, i) {
+                layerMenu.items.push({
+                    id: item.dzi,
+                    text: item.name,
+                    checked: i === 0,
+                    pixelSize: item.pixelSize
+                })
+            })
+            layerMenu.selected = me.currentSample.dziFiles[0].dzi;
+            me.tools["editSample"].record = me.currentSample.metadata;
+
         },
 
         viewHistory: function () {
@@ -116,13 +140,33 @@ const Annotator = (function () {
             console.log(history.join("\n"));
         },
 
+        checkRoles: function (requested) {
+            let result = true;
+            Object.keys(requested).forEach(function (actionGroup) {
+                Object.keys(requested[actionGroup]).forEach(function (actionType) {
+                    if (me.roles[actionGroup][actionType] === false) {
+                        result = false;
+                    }
+                });
+            });
+            return result
+        },
+
         do: function (action) {
+            if (me.roles[action.actionGroup][action.actionType] === false) {
+                alert(
+                    "Denied action: " + action.actionType + " " +
+                    action.actionGroup
+                );
+                return;
+            }
             me.actionsHistory = me.actionsHistory.slice(
                 0, me.currentActionPointer + 1
             );
             me.actionsHistory.push(action);
             me.currentActionPointer = me.actionsHistory.indexOf(action)
             action.do();
+            Annotator.updateView();
         },
 
         redo: function () {
@@ -130,6 +174,7 @@ const Annotator = (function () {
             if (action) {
                 action.do();
                 me.currentActionPointer += 1;
+                Annotator.updateView();
             }
         },
 
@@ -138,6 +183,7 @@ const Annotator = (function () {
             if (action) {
                 action.undo();
                 me.currentActionPointer -= 1;
+                Annotator.updateView();
             }
         },
 
@@ -167,6 +213,9 @@ const Annotator = (function () {
             let group = me.currentTag;
             me.currentPath = path;
             me.currentPath.style = {...me.userConfig.baseStyle}
+            me.currentPath.style.strokeWidth = me.adjustByZoom(
+                me.userConfig.baseStrokeWidth
+            );
             me.currentPath.opacity = me.userConfig.opacity;
         },
 
@@ -185,46 +234,84 @@ const Annotator = (function () {
             group.style = {...cascadeStyle};
         },
 
+        setCurrentItemTooltip: function (item) {
+            if (me.currentItemTooltip === item) {
+                return;
+            }
+            me.currentItemTooltip = item;
+
+
+            let style = "\"" +
+                "margin: 0; " +
+                "padding-left: 10px;" +
+                "padding-right: 10px;" +
+                //"font-family:'Lucida Console', monospace;" +
+                "position: absolute; " +
+                "top: 50%; " +
+                "-ms-transform: translateY(-50%); " +
+                "transform: translateY(-50%);\"";
+
+            let itemName;
+
+            if (me.currentItemTooltip !== null) {
+                itemName = me.getItemFullName(me.currentItemTooltip);
+            } else {
+                itemName = "";
+            }
+
+            w2ui.layout.html(
+                'bottom',
+                "<div style=" + style + ">" + itemName + "</div>"
+            );
+        },
+
+        getItemFullName: function (item) {
+            let fullname = "";
+            item.parent.data.parents.forEach(function (parent_id) {
+                fullname += me.tags.getItem({name: "tag_" + parent_id}).data.name + " -> ";
+            });
+            fullname += item.parent.data.name;
+            return fullname;
+        },
+
         pressHandler: function (event) {
             if (me.tools[me.currentTool] && me.tools[me.currentTool].mousePress) {
                 me.tools[me.currentTool].mousePress(event);
             }
-            paper.view.draw();
         },
 
         clickHandler: function (event) {
             if (me.tools[me.currentTool] && me.tools[me.currentTool].mouseClick) {
                 me.tools[me.currentTool].mouseClick(event);
             }
-            paper.view.draw();
         },
 
         dragHandler: function (event) {
             if (me.tools[me.currentTool] && me.tools[me.currentTool].mouseDrag) {
                 me.tools[me.currentTool].mouseDrag(event);
             }
-            paper.view.draw();
         },
 
         dragEndHandler: function (event) {
             if (me.tools[me.currentTool] && me.tools[me.currentTool].mouseDragEnd) {
                 me.tools[me.currentTool].mouseDragEnd(event);
             }
-            paper.view.draw();
         },
 
         moveHandler: function (event) {
             if (me.tools[me.currentTool] && me.tools[me.currentTool].mouseMove) {
                 me.tools[me.currentTool].mouseMove(event);
             }
-            paper.view.draw();
         },
 
         dblClickHandler: function (event) {
             if (me.tools[me.currentTool] && me.tools[me.currentTool].mouseDblClick) {
                 me.tools[me.currentTool].mouseDblClick(event);
             }
-            paper.view.draw();
+        },
+
+        updateView: function () {
+            paper.view.update();
         },
 
         initToolbars: function () {
@@ -235,9 +322,18 @@ const Annotator = (function () {
 
             me.startConfig.toolbarToolsOrder.forEach(function (tool_name) {
                 if (me.tools[tool_name] && me.tools[tool_name].toolbar) {
+                    let disable = false;
+                    if (me.tools[tool_name].toolbar.roles) {
+                        if (!me.checkRoles(me.tools[tool_name].toolbar.roles)) {
+                            disable = true;
+                        }
+                    }
                     w2ui['layout_main_toolbar'].insert(
                         me.tools[tool_name].toolbar.break,
-                        me.tools[tool_name].toolbar.config
+                        {
+                            disabled: disable,
+                            ...me.tools[tool_name].toolbar.config
+                        }
                     )
                     if (me.tools[tool_name].toolbar.config.onLoad) {
                         me.tools[tool_name].toolbar.config.onLoad();
@@ -252,14 +348,27 @@ const Annotator = (function () {
             $('#annotator').w2layout({
                 name: 'layout',
                 panels: [
-                    {type: 'right', title: "Anotador", size: 400, resizable: true},
-                    {type: 'main', title: "Anotaciones", toolbar: me.initViewerToolbar()},
+                    {
+                        type: 'right',
+                        title: "Anotador",
+                        size: 400,
+                        resizable: true,
+                    },
+                    {
+                        type: 'main',
+                        title: "Anotaciones",
+                        toolbar: me.initViewerToolbar()
+                    },
+                    {
+                        type: 'bottom',
+                        size: 40
+                    }
                 ]
             });
         },
 
         initSidebar: function () {
-            w2ui.layout.content('right', $().w2sidebar(
+            w2ui.layout.html('right', $().w2sidebar(
                 {
                     name: 'sidebar',
                     style: 'font-weight: bold',
@@ -267,7 +376,7 @@ const Annotator = (function () {
                         me.currentTag = event.node.paperGroup;
                     }
                 }));
-            w2ui.layout.content(
+            w2ui.layout.html(
                 'main',
                 "<div id=\"osd_viewer\" style=\"width: 100%; height:100%;\"</div>"
             );
@@ -286,11 +395,22 @@ const Annotator = (function () {
                         type: 'menu-radio',
                         id: 'layerMenu',
                         count: 1,
-                        text: 'Vistas disponibles',
+                        text: 'Canales',
                         icon: 'fa fa-layer-group',
                         items: [],
                     },
                 ],
+                onClick: function(event){
+                    if (event.subItem){
+                        if (event.item.id === "layerMenu"){
+                            me.openDZI({
+                                name: event.subItem.text,
+                                dzi: event.subItem.id,
+                                pixelSize: event.subItem.pixelSize
+                            });
+                        }
+                    }
+                }
             }
         },
 
@@ -361,22 +481,54 @@ const Annotator = (function () {
             }).setTracking(true);
 
             me.viewer.world.addHandler("add-item", me._onViewerOpen);
+            me.viewer.addHandler("zoom", me._onViewerZoom);
+        },
 
-            me.viewer.addTiledImage({
-                tileSource: "https://openseadragon.github.io/example-images/highsmith/highsmith.dzi",
-                x: 0,
-                y: 0,
-            });
+        openDZI: function (dziItem) {
+            console.log(dziItem);
+            me.viewer.scalebar({pixelsPerMeter: 1 / dziItem.pixelSize});
+            me.viewer.open(me.currentSample.folder + dziItem.dzi);
+        },
+
+        _onViewerZoom: function () {
+            me.tags.style.strokeWidth = me.adjustByZoom(
+                me.userConfig.baseStrokeWidth
+            );
+            let zoom = me.viewer.viewport.getZoom(false);
+            if (zoom < 1.0) {
+                paper.settings.handleSize = 8;
+            } else {
+                paper.settings.handleSize = 8;
+            }
 
         },
 
-        openDZI: function (name) {
-            me.viewer.open(me.dziFiles[name]);
+        adjustByZoom: function (baseSize, bounds) {
+            let zoom = me.viewer.viewport.getZoom(false);
+            let newSize;
+            if (zoom > 1.0) {
+                newSize = baseSize / zoom;
+            } else {
+                newSize = baseSize;
+            }
+            if (bounds) {
+                if (bounds.minSize) {
+                    if (newSize < bounds.minSize) {
+                        newSize = bounds.minSize;
+                    }
+                }
+                if (bounds.maxSize) {
+                    if (newSize > bounds.maxSize) {
+                        newSize = bounds.maxSize;
+                    }
+                }
+            }
+            return newSize
         },
 
         _onViewerOpen: function () {
             me.full_image_width = me.viewer.world.getItemAt(0).getContentSize().x;
-            me.full_image_heigth = me.viewer.world.getItemAt(0).getContentSize().y;
+            me.full_image_height = me.viewer.world.getItemAt(0).getContentSize().y;
         },
 
         loadTags: function (hierarchy, container) {
@@ -476,7 +628,7 @@ const Annotator = (function () {
                                 }
 
                                 _selectAll(node);
-                                paper.view.draw();
+                                paper.view.update();
                                 me.viewer.canvas.focus();
                             }
                         },
@@ -498,7 +650,7 @@ const Annotator = (function () {
                     me.refreshSidebarButton(subButton);
                 }
             })
-            paper.view.draw();
+            paper.view.update();
             w2ui.sidebar.unlock();
         },
 

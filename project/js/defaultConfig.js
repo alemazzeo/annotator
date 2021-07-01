@@ -34,10 +34,10 @@ startConfig = {
 
 userConfig = {
     baseStyle: {
-        fillColor: 'white',
+        // fillColor: 'white',
         strokeColor: 'black',
-        strokeWidth: 20,
     },
+    baseStrokeWidth: 20,
     opacity: 0.5,
     subOpacity: 1.0,
     hierarchyStyles: null,

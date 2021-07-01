@@ -9,7 +9,7 @@ sampleMetadataFields = [
     },
     "html": {
       "group": "Muestra",
-      "caption": "Tipo",
+      "label": "Tipo",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -19,7 +19,7 @@ sampleMetadataFields = [
     "required": true,
     "html": {
       "group": "Muestra",
-      "caption": "Número",
+      "label": "Número",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -37,7 +37,7 @@ sampleMetadataFields = [
     },
     "html": {
       "group": "Muestra",
-      "caption": "Profundidad",
+      "label": "Profundidad",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -55,7 +55,7 @@ sampleMetadataFields = [
     },
     "html": {
       "group": "Muestra",
-      "caption": "Profundidad (corregida)",
+      "label": "Profundidad (corregida)",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -64,7 +64,7 @@ sampleMetadataFields = [
     "type": "text",
     "required": true,
     "html": {
-      "caption": "Observaciones",
+      "label": "Observaciones",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -74,7 +74,7 @@ sampleMetadataFields = [
     "required": true,
     "html": {
       "group": "Pozo",
-      "caption": "Sigla de pozo",
+      "label": "Sigla de pozo",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -84,7 +84,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "Nombre del pozo",
+      "label": "Nombre del pozo",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -99,7 +99,7 @@ sampleMetadataFields = [
     },
     "html": {
       "group": "Pozo",
-      "caption": "Empresa operadora",
+      "label": "Empresa operadora",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -109,7 +109,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "Yacimiento",
+      "label": "Yacimiento",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -119,7 +119,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "Bloque",
+      "label": "Bloque",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -129,7 +129,7 @@ sampleMetadataFields = [
     "required": false ,
     "html": {
       "group": "Pozo",
-      "caption": "Cuenca",
+      "label": "Cuenca",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -139,7 +139,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "",
+      "label": "",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -149,7 +149,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "",
+      "label": "",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -159,7 +159,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "Coordenada x",
+      "label": "Coordenada x",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -169,7 +169,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "Coordenada y",
+      "label": "Coordenada y",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -179,7 +179,7 @@ sampleMetadataFields = [
     "required": false,
     "html": {
       "group": "Pozo",
-      "caption": "Coordenada z",
+      "label": "Coordenada z",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -189,7 +189,7 @@ sampleMetadataFields = [
     "required": true,
     "html": {
       "group": "Pozo",
-      "caption": "Formación",
+      "label": "Formación",
       "html": "style=\"width: 500px;\""
     }
   },
@@ -202,7 +202,7 @@ sampleMetadataFields = [
     },
     "html": {
       "group": "Pozo",
-      "caption": "Tipo de pozo",
+      "label": "Tipo de pozo",
       "html": "style=\"width: 500px;\""
     }
   },

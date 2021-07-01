@@ -12,7 +12,7 @@
 ## Funcionalidad
 
 - [ ] agregar roles al defaultConfig que configura las herramientas
-- [ ] agregar tooltips a las anotaciones
+- [x] agregar tooltips a las anotaciones
 - [x] agregar panel para visualizar o editar metadata de la muestra
 - [ ] agregar barra de herramientas al sidebar de componentes
 - [ ] pasar cambios de color y visibilidad a acciones

@@ -100,6 +100,7 @@ var AnnotationTools = {
                     let hitResult = paper.project.hitTest(newPoint);
                     if (hitResult) {
                         hitResult.item.selected = true;
+                        Annotator.updateView();
                     }
 
                     Annotator.viewer.setMouseNavEnabled(true);
@@ -143,7 +144,6 @@ var AnnotationTools = {
                 let style = {
                     fillColor: null,
                     strokeColor: 'black',
-                    strokeWidth: 20,
                 }
 
                 let selected = paper.project.getItems({
@@ -152,8 +152,8 @@ var AnnotationTools = {
                 })
 
                 if (newPoint.x < this.startPoint.x){
-                    let zoom = Annotator.viewer.viewport.getZoom(true)
-                    let dash = 30 / zoom;
+                    let zoom = Annotator.viewer.viewport.getZoom(false)
+                    let dash = 50 / zoom;
                     style.dashArray = [dash, dash];
                     selected = [
                         ...selected,
@@ -172,14 +172,30 @@ var AnnotationTools = {
                     ...Annotator.currentPath.style,
                     ...style
                 }
-
+                Annotator.updateView();
                 Annotator.viewer.setMouseNavEnabled(false);
             },
 
             mouseDragEnd: function (event) {
                 Annotator.currentPath.remove();
+                Annotator.updateView();
                 Annotator.viewer.setMouseNavEnabled(true);
             },
+
+            mouseMove: function (event) {
+                if (!this.dragging) {
+                    let x = event.position.x;
+                    let y = event.position.y;
+                    let newPoint = paper.view.viewToProject(new paper.Point(x, y));
+
+                    let hitResult = paper.project.hitTest(newPoint);
+                    if (hitResult) {
+                        Annotator.setCurrentItemTooltip(hitResult.item);
+                    } else {
+                        Annotator.setCurrentItemTooltip(null);
+                    }
+                }
+            }
         };
     }()),
 
@@ -187,6 +203,11 @@ var AnnotationTools = {
         return {
             toolbar: {
                 break: 'break-annotations',
+                roles: {
+                    annotations: {
+                        add: true
+                    }
+                },
                 config: {
                     type: 'radio',
                     id: 'freeDraw',
@@ -217,15 +238,14 @@ var AnnotationTools = {
                     this.firstPoint = Annotator.currentPath.lastSegment.point;
                     this.lastPoint = Annotator.currentPath.lastSegment.point;
                     Annotator.currentPath.add(newPoint);
-
-                    Annotator.viewer.setMouseNavEnabled(false);
-
+                    Annotator.updateView();
+                    this.started = true;
                 }
-                this.started = true;
-
+                Annotator.setCurrentItemTooltip(null);
             },
 
             mouseDrag: function (event) {
+                Annotator.viewer.setMouseNavEnabled(false);
                 if (Annotator.currentPath && this.started) {
                     let x = event.position.x;
                     let y = event.position.y;
@@ -233,7 +253,7 @@ var AnnotationTools = {
                     let newPoint = paper.view.viewToProject(new paper.Point(x, y));
                     let distanceFirst = newPoint.subtract(this.firstPoint).length;
                     let distanceLast = newPoint.subtract(this.lastPoint).length;
-                    let zoom = Annotator.viewer.viewport.getZoom(true)
+                    let zoom = Annotator.viewer.viewport.getZoom(false)
 
                     if (distanceLast > this.tolerance / zoom) {
 
@@ -247,6 +267,8 @@ var AnnotationTools = {
                     } else {
                         Annotator.currentPath.lastSegment.point = newPoint;
                     }
+                    this.started = true;
+                    Annotator.updateView();
                 }
             },
 
@@ -255,12 +277,27 @@ var AnnotationTools = {
                 if (Annotator.currentPath) {
                     Annotator.currentPath.lastSegment.remove();
                     Annotator.currentPath.closed = true;
-                    Annotator.viewer.setMouseNavEnabled(true);
-
                 }
                 this.started = false;
                 Annotator.addAnnotation();
+                Annotator.updateView();
+                Annotator.viewer.setMouseNavEnabled(true);
             },
+
+            mouseMove: function (event) {
+                if (!this.started) {
+                    let x = event.position.x;
+                    let y = event.position.y;
+                    let newPoint = paper.view.viewToProject(new paper.Point(x, y));
+
+                    let hitResult = paper.project.hitTest(newPoint);
+                    if (hitResult) {
+                        Annotator.setCurrentItemTooltip(hitResult.item);
+                    } else {
+                        Annotator.setCurrentItemTooltip(null);
+                    }
+                }
+            }
         };
     }()),
 
@@ -268,6 +305,11 @@ var AnnotationTools = {
             return {
                 toolbar: {
                     break: 'break-annotations',
+                    roles: {
+                        annotations: {
+                            add: true
+                        }
+                    },
                     config: {
                         type: 'radio',
                         id: 'polygonDraw',
@@ -296,9 +338,9 @@ var AnnotationTools = {
                     }
 
                     Annotator.currentPath.add(newPoint);
+                    Annotator.updateView();
                     Annotator.viewer.setMouseNavEnabled(false);
-
-
+                    Annotator.setCurrentItemTooltip(null);
                 },
 
                 mouseMove: function (event) {
@@ -307,20 +349,32 @@ var AnnotationTools = {
                         let y = event.position.y;
                         let newPoint = paper.view.viewToProject(new paper.Point(x, y));
                         Annotator.currentPath.lastSegment.point = newPoint;
+                        Annotator.updateView();
+                    } else {
+                        let x = event.position.x;
+                        let y = event.position.y;
+                        let newPoint = paper.view.viewToProject(new paper.Point(x, y));
 
+                        let hitResult = paper.project.hitTest(newPoint);
+                        if (hitResult) {
+                            Annotator.setCurrentItemTooltip(hitResult.item);
+                        } else {
+                            Annotator.setCurrentItemTooltip(null);
+                        }
                     }
                 },
 
                 mouseDblClick: function (event) {
                     if (this.started) {
-                        Annotator.currentPath.lastSegment.remove()
-                        Annotator.currentPath.lastSegment.remove()
+                        Annotator.currentPath.lastSegment.remove();
+                        Annotator.currentPath.lastSegment.remove();
+                        Annotator.currentPath.lastSegment.remove();
                         Annotator.currentPath.closed = true;
                         this.started = false;
                         Annotator.viewer.setMouseNavEnabled(true);
-
+                        Annotator.addAnnotation();
+                        Annotator.updateView();
                     }
-                    Annotator.addAnnotation();
                 },
             };
         }()
@@ -330,6 +384,11 @@ var AnnotationTools = {
             return {
                 toolbar: {
                     break: 'break-annotations',
+                    roles: {
+                        annotations: {
+                            add: true
+                        }
+                    },
                     config: {
                         type: 'radio',
                         id: 'circleArea',
@@ -353,6 +412,7 @@ var AnnotationTools = {
                         let y = event.position.y;
                         this.center = paper.view.viewToProject(new paper.Point(x, y));
                     }
+                    Annotator.setCurrentItemTooltip(null);
                 },
 
                 mouseDrag: function (event) {
@@ -371,12 +431,11 @@ var AnnotationTools = {
                                 radius: newPoint.subtract(this.center).length,
                                 dashArray: [2, 2],
                                 strokeColor: 'black',
-                                strokeWidth: 20,
                             }));
                             this.dragging = true;
 
+                            Annotator.addAnnotation();
                             Annotator.viewer.setMouseNavEnabled(false);
-
                         }
                     }
                 },
@@ -403,6 +462,22 @@ var AnnotationTools = {
                     this.dragging = false;
                     Annotator.addAnnotation();
                 },
+
+                mouseMove: function (event) {
+                    if (!this.dragging) {
+                        let x = event.position.x;
+                        let y = event.position.y;
+                        let newPoint = paper.view.viewToProject(new paper.Point(x, y));
+
+                        let hitResult = paper.project.hitTest(newPoint);
+                        if (hitResult) {
+                            Annotator.setCurrentItemTooltip(hitResult.item);
+                        } else {
+                            Annotator.setCurrentItemTooltip(null);
+                        }
+                    }
+                }
+
             };
         }()
     ),
@@ -411,6 +486,11 @@ var AnnotationTools = {
         return {
             toolbar: {
                 break: 'break-annotations',
+                roles: {
+                    annotations: {
+                        add: true
+                    }
+                },
                 config: {
                     type: 'radio',
                     id: 'eraser',
@@ -431,9 +511,23 @@ var AnnotationTools = {
                 var point = paper.view.viewToProject(new paper.Point(x, y));
                 var hit_test_result = paper.project.hitTest(point);
                 if (hit_test_result) {
-                    hit_test_result.item.remove();
+                    Annotator.deleteAnnotations([hit_test_result.item])
                 }
+                Annotator.setCurrentItemTooltip(null);
             },
+
+            mouseMove: function (event) {
+                let x = event.position.x;
+                let y = event.position.y;
+                let newPoint = paper.view.viewToProject(new paper.Point(x, y));
+
+                let hitResult = paper.project.hitTest(newPoint);
+                if (hitResult) {
+                    Annotator.setCurrentItemTooltip(hitResult.item);
+                } else {
+                    Annotator.setCurrentItemTooltip(null);
+                }
+            }
         };
     }()),
 };
